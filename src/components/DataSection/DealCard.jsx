@@ -1,12 +1,14 @@
 import PropTypes from "prop-types";
 import splitStringWithSpace from "../../utils/splitString";
+import { Link } from "react-router-dom";
 
 const textStyle = "font-lato font-bold text-[18px] leading-[22px]"
 
 export default function DealCard({ item }) {
 
   return (
-    <div className="relative w-[300] max:w-[630px] h-[400px] bg-gray-100 rounded-[5px] flex flex-col items-center justify-evenly py-5 px-5 flex-grow-0 flex-1 flex-shrink-0">
+      <Link to={`/deal/${item.id}`}   state={ { dealData: item }}
+     className="relative w-[300] max:w-[630px] h-[400px] bg-gray-100 rounded-[5px] flex flex-col items-center justify-evenly py-5 px-5 flex-grow-0 flex-1 flex-shrink-0">
       <img
         src={`http://localhost:3000/${item.deal_img_path}`}
         alt={item.name}
@@ -22,10 +24,10 @@ export default function DealCard({ item }) {
                   <p className={textStyle}>Days left { item.days_left}</p>
               </div>
           </div>
-    </div>
+    </Link>
   );
 }
 
 DealCard.propTypes = {
-  item: PropTypes.object,
+    item: PropTypes.object, 
 };

@@ -1,19 +1,21 @@
-import DataSection from './components/DataSection/DataSection';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection/HeroSection'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from "./components/HomePage";
+import DealPage from './components/DealPage';
+import ErrorPage from './components/ErrorPage';
 
 function App() { 
 
   return (
-    <div className='flex flex-col min-h-screen'>
-      <Header />
-      <main className='flex-grow'>
-        <HeroSection />
-        <DataSection />
-      </main>
-      <Footer  />
-    </div>
+    <Router>
+    <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route
+      path="/deal/:id"
+      element={<DealPage/>}
+    />
+  <Route path="*" element={<ErrorPage />} />
+</Routes>
+</Router>
   );
 }
 

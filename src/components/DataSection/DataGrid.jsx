@@ -2,7 +2,7 @@ import React from 'react'
 import SkeletonCard from './SkeletonCard'
 import { useState, useEffect  } from 'react';
 import { getDeals } from '../../api/getDeals';
-import DealCard from './DealCard';
+import DealCard from './DealCard'; 
 
 export default function DataGrid() {
   const [loading, setLoading] = useState(true);
@@ -19,9 +19,7 @@ export default function DataGrid() {
      setLoading(false);
 }
   useEffect(() => { 
-     
-     fethchDeals() 
-    
+    fethchDeals();
   },[])
 
   return (
