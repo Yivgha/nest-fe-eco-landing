@@ -11,6 +11,9 @@ module.exports = {
         golden: COLORS.golden,
         white: COLORS.white,
         heroBg: COLORS.heroBg,
+        black: COLORS.black,
+        inputBg: COLORS.inputBg,
+        loginBg: COLORS.loginBg,
       },
       fontFamily: {
         lato: ["Lato", "sans-serif"],
