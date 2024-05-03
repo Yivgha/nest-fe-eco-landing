@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logOut } from "../redux/actions";
 
-export default function Header({ showText = true, showBtns = true }) {
+export default function Header({ showText = true, showBtns = true, showUser=true }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user);
@@ -17,7 +17,7 @@ export default function Header({ showText = true, showBtns = true }) {
     >
       {!!showText && <LogoText />}
       <nav className="flex flex-row gap-1 md:gap-2.5">
-        {user !== null && (
+        {user !== null &&  !!showUser && (
           <div className="flex flex-row gap-1 md:gap-2.5 items-center">
             <p className="text-golden">{user?.name}</p>
             <FilledBtn
@@ -47,4 +47,5 @@ export default function Header({ showText = true, showBtns = true }) {
 Header.propTypes = {
   showText: PropTypes.bool,
   showBtns: PropTypes.bool,
+  showUser: PropTypes.bool,
 };

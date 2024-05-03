@@ -11,7 +11,7 @@ export default function LoginPage() {
   const navigate = useNavigate();
   return (
     <div className="flex flex-col w-full bg-loginBg ">
-      <Header showText={false} showBtns={false} />
+      <Header showText={false} showBtns={false} showUser={false} />
       <main className="flex flex-col mb-3 md:mb-0 gap-2 md:gap-0 md:flex-row ">
         <div className="flex-1 md:flex-2 w-full md:min-w-[66%] md:w-[890px]  h-[943px]">
           <img

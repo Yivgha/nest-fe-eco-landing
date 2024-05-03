@@ -18,13 +18,11 @@ export default function SignUpForm() {
 
  const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(name, value); // Add this line to see what values are being captured
     setFormData({
         ...formData,
         [name]: value
     });
  };
-
     const handleSubmit = async(e) => {
         e.preventDefault();
  

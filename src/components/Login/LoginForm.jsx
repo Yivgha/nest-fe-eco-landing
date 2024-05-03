@@ -22,8 +22,7 @@ export default function LoginForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    loginUser(email, password).then(res => { console.log(res);  dispatch(loginSuccess(res));})
-   
+    loginUser(email, password).then(res => dispatch(loginSuccess(res)))
     navigate("/");   
   };
 
@@ -34,7 +33,7 @@ export default function LoginForm() {
           <CustomInput value={password} id="password" type="password" placeholder="Password" onChange={handlePasswordChange} />
 
           <p className='text-golden font-lato font-semibold text-[14px] leading-[22px] text-right cursor-pointer'
-              onClick={() => alert("Clicked to change password")} >Forgot password?</p>
+              onClick={() => alert("Clicked to change password. Unfortunately, no more logic here yet :(")} >Forgot password?</p>
           
           <FilledBtn type="submit" text="Sign in" className="w-full"/>
     </form>

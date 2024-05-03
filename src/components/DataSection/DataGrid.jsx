@@ -13,7 +13,7 @@ export default function DataGrid() {
     const deals = await getDeals();
     setDealsList(deals); 
   } catch (error) {
-    console.log(error)
+    throw error;
   }
      setLoading(false);
 }

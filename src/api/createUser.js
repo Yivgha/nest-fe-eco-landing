@@ -9,10 +9,8 @@ export async function createUser(formData) {
       body: JSON.stringify(formData),
     });
     if (response.ok) {
-      // Handle success
       console.log("User created successfully");
     } else {
-      // Handle error
       console.error("Failed to create user");
     }
   } catch (error) {
