@@ -1,4 +1,3 @@
-import React from 'react'
 import SkeletonCard from './SkeletonCard'
 import { useState, useEffect  } from 'react';
 import { getDeals } from '../../api/getDeals';

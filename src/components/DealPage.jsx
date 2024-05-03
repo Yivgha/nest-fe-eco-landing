@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import OutlinedBtn from "./OutlinedBtn";
+import splitStringWithSpace from "../utils/splitString";
 
 const aboutTextStyle = "font-lato text-gray-700 text-xl"
 
@@ -13,7 +14,6 @@ export default function DealPage( ) {
     navigate(-1);
   };
 
- 
     return (
         <div className="flex flex-col justify-start w-full h-[100%] bg-gray-100 px-5 py-4 gap-5">
         <OutlinedBtn text="Go back" onClick={goBack}/> 
@@ -22,8 +22,8 @@ export default function DealPage( ) {
                 <img  src={`http://localhost:3000/${deal_img_path}`}
                     alt={name} className="w-[60%] h-auto self-center" />
                 <h2 className="font-lato text-gray-400 text-3xl">About</h2>
-                <p className={aboutTextStyle}>Dhs amount: {total_dhs} </p>
-                <p className={aboutTextStyle}>Tiket Dhs: {ticket_dhs} </p>
+                <p className={aboutTextStyle}>Dhs amount: {splitStringWithSpace(total_dhs)} </p>
+                <p className={aboutTextStyle}>Tiket Dhs: {splitStringWithSpace(ticket_dhs)} </p>
                 <p className={aboutTextStyle}>Yield amount: {yield_amount}% </p>
                 <p className={aboutTextStyle}>Sold: {sold}%</p>
                 <p className={aboutTextStyle }>Days left: {days_left} </p>
