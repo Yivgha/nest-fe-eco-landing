@@ -1,11 +1,16 @@
 import  { useState } from 'react';
 import CustomInput from '../CustomInput';
 import FilledBtn from '../FilledBtn';
+import { loginUser } from '../../api/getUsers';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { loginSuccess } from '../../redux/actions';
 
 export default function LoginForm() {
   const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -17,9 +22,9 @@ export default function LoginForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission, e.g., send data to server
-    console.log('Email:', email);
-    console.log('Password:', password);
+    loginUser(email, password).then(res => { console.log(res);  dispatch(loginSuccess(res));})
+   
+    navigate("/");   
   };
 
   return (
