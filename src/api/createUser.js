@@ -1,7 +1,8 @@
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 export async function createUser(formData) {
   console.log("data in fetch", formData);
   try {
-    const response = await fetch("http://localhost:3030/user", {
+    const response = await fetch(`${BASE_URL}/user`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -17,3 +18,4 @@ export async function createUser(formData) {
     console.error("Error occurred:", error);
   }
 }
+

@@ -1,6 +1,8 @@
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+
 export async function getDeals() {
   try {
-    const response = await fetch("http://localhost:3030/deals");
+    const response = await fetch(`${BASE_URL}/deals`);
     if (!response.ok) {
       throw new Error("Failed to fetch deals");
     }
@@ -8,13 +10,13 @@ export async function getDeals() {
     return data;
   } catch (error) {
     console.error("Error fetching deals:", error);
-    throw error; // Rethrow the error to propagate it to the caller
+    throw error;
   }
 }
 
 export async function getOneDeal(id) {
   try {
-    const response = await fetch(`http://localhost:3030/deals/${id}`);
+    const response = await fetch(`${BASE_URL}/deals/${id}`);
     if (!response.ok) {
       throw new Error("Failed to fetch deal by id", id);
     }
