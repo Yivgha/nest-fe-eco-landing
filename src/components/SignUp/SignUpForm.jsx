@@ -43,7 +43,7 @@ export default function SignUpForm() {
 
           <SelectGender value={formData.gender} onChange={handleChange}/>
           
-          <FilledBtn type="submit" text="Sign in" className="w-full"/>
+          <FilledBtn type="submit" text="Sign up" className="w-full"/>
     </form>
   ); 
 }

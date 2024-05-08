@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Eco landing React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![https://img.shields.io/badge/-Github-black?logo=github&logoColor=white&style=plastic](https://img.shields.io/badge/-Github-black?logo=github&logoColor=white&style=plastic) ![https://img.shields.io/badge/-JavaScript-FFFF00?logo=javascript&logoColor=black&style=plastic](https://img.shields.io/badge/-JavaScript-FFFF00?logo=javascript&logoColor=black&style=plastic) ![https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square) ![https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=plastic](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=plastic) ![https://img.shields.io/badge/-Node.js-228B22?logo=nodedotjs&logoColor=white&style=plastic](https://img.shields.io/badge/-Node.js-228B22?logo=nodedotjs&logoColor=white&style=plastic) ![https://img.shields.io/badge/nestjs-E0234E?style=for-the-badge&logo=nestjs&logoColor=white](https://img.shields.io/badge/nestjs-E0234E?style=for-the-badge&logo=nestjs&logoColor=white) ![https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white](https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white) ![https://img.shields.io/badge/-Redux-764ABC?style=flat&logo=redux&logoColor=white](https://img.shields.io/badge/-Redux-764ABC?style=flat&logo=redux&logoColor=white)
 
-## Available Scripts
+This is pet project created with React, Redux plus Nest.js/Heroku backend and PostgreSQL database.
 
-In the project directory, you can run:
+## Main page
 
-### `npm start`
+After opening main page, you can see header with logo and login/signup buttons or username/signout button.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Starting screen](./src/assets/readme/main_page.jpg)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Open deals
 
-### `npm test`
+The biggest logic is inside Open deals section. It gets data from heroku backend database, if there's no data or it is loading, user'll see skeleton cards.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Open deals](./src/assets/readme/open_deals.jpg)
 
-### `npm run build`
+### Deal page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+User can click on any deal in grid and navigate to Deal page, which's fetching data from backend too.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Deal page](./src/assets/readme/one_deal.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Sign up
 
-### `npm run eject`
+**Note: All data after submitting and accepting on backend, will be stored in Redux**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+User can register on Sign up page and after successful submitting of the form, will be redirected to login page.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Deal page](./src/assets/readme/sign_up.jpg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Using email and password, we can login to the app. After this we navigate to main page and can see our name and sign out button in header.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Deal page](./src/assets/readme/login.jpg)
 
-## Learn More
+After adding videopresentation and screenshots to this file, heroku servers will be deleted, so you can't reach app via netlify.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
