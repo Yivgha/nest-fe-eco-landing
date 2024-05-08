@@ -3,6 +3,7 @@ import OutlinedBtn from "./OutlinedBtn";
 import splitStringWithSpace from "../utils/splitString";
 
 const aboutTextStyle = "font-lato text-gray-700 text-xl"
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function DealPage( ) {
     const params = useLocation().state.dealData;
@@ -19,7 +20,7 @@ export default function DealPage( ) {
         <OutlinedBtn text="Go back" onClick={goBack}/> 
             <div className="flex flex-col gap-4 items-start">
                 <h1 className="font-lato font-bold text-5xl self-center">{name}</h1>
-                <img  src={`http://localhost:3000/${deal_img_path}`}
+                <img  src={`${BASE_URL}${deal_img_path}`}
                     alt={name} className="w-[60%] h-auto self-center" />
                 <h2 className="font-lato text-gray-400 text-3xl">About</h2>
                 <p className={aboutTextStyle}>Dhs amount: {splitStringWithSpace(total_dhs)} </p>
