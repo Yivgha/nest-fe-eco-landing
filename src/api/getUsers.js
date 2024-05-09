@@ -18,3 +18,4 @@ export async function loginUser(email, password) {
     throw error;
   }
 }
+
