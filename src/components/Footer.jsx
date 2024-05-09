@@ -9,7 +9,7 @@ export default function Footer() {
           <LogoText onClick={()=>navigate("/")} />
           <div className='flex flex-row gap-1 justify-center items-center'>
               <p>Made by:</p>
-              <p className='text-golden font-bold text-[18px]'>Yevheniia P.</p>
+              <p className='text-golden font-bold text-[18px]'>Yevheniia Plaskon</p>
           </div>
     </footer>
   )
