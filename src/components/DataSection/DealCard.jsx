@@ -1,15 +1,18 @@
 import PropTypes from "prop-types";
 import splitStringWithSpace from "../../utils/splitString";
 import { Link } from "react-router-dom";
+import { modifyImgUrl } from "../../utils/modifyBucketImgUrl";
 
-const textStyle = "font-lato font-bold text-[18px] leading-[22px]"
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+const textStyle = "font-lato font-bold text-[18px] leading-[22px]";
+
 export default function DealCard({ item }) {  
+  const correctImgUrl = modifyImgUrl(item.deal_img_path);
+  
   return (
       <Link to={`/deal/${item.id}`}   state={ { dealData: item }}
      className="relative w-[300] max:w-[630px] h-[400px] bg-gray-100 rounded-[5px] flex flex-col items-center justify-evenly py-5 px-5 flex-grow-0 flex-1 flex-shrink-0">
       <img
-        src={`${BASE_URL}${item.deal_img_path}`}
+        src={`${correctImgUrl}`}
         alt={item.name}
         className="absolute w-full h-full object-cover rounded-[5px] z-[1]"
           />
